@@ -1,0 +1,379 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-size: 10px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	display: inline-flex;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.icon {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiades;
+}
+
+#header {
+	background-image: url("../img/capa-madmax2.jpg");
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: cover;
+	display: flex;
+	height: 90vh;
+	padding: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+}
+
+#header::after {
+	content:"";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 212, 255, 0) 75%
+	);
+	left: 0;
+	top: 0;
+}
+
+#header .top {
+	display: flex;
+	justify-content: space-between;
+	justify-items: center;
+	align-items: center;
+}
+
+#header .nav-top ul li a {
+	font-size: 1.3em;
+	margin: 0 25px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+
+#header .nav-top ul li a:hover,
+#header .container-movie .nav-movie ul li a:hover {
+	color: #e4bb23;
+}
+
+#header .user {
+	width: 150px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+#header .user img {
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+}
+
+#header .top, 
+#header .container-movie {
+	width: 960px;
+	margin: 0 auto;
+	z-index: 1;
+	position: relative;
+}
+
+#header .container-movie h1 {
+	font-size: 6.5em;
+	color: #fff;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 1.2em;
+}
+
+#header .container-movie .nav-movie {
+	margin: 15px 0 30px;
+}
+
+#header .container-movie .nav-movie ul li a {
+	font-size: 13px;
+	color: #fff;
+	margin-right: 15px;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+
+#header .btn-trailer-movie a {
+	padding: 15px 50px;
+	background: #e4bb23;
+	border-radius: 40px;
+	font-size: 1.5em;
+	color: #000;
+	transition: all 0.2s ease-in-out;
+	display: inline-block;
+    position: relative;
+}
+
+#header .btn-trailer-movie a:hover {
+	background: #bc9a1d;
+}
+
+#header .btn-trailer-movie a .icon-play {
+	right: 15px;
+	font-size: 1.5em;
+	top: 12px;
+	position: absolute;
+}
+
+#header .btn-trailer-movie a .icon-play::before {
+	content: "\f01d";
+}
+
+#header .date-release {
+	padding: 20px 0;
+	font-size: 1.4em;
+	color:#fff;
+}
+
+#header .date-release .info-release {
+	color: #bc9a1d;
+}
+
+#main.catalog {
+	background: #f2f2f2;
+	width: 100%;
+}
+
+#main.catalog  .nav-catalog {
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	transition: all 0.2s ease-in-out;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#main.catalog  .nav-catalog  ul li {
+	margin: 0 20px;
+}
+
+#main.catalog  .nav-catalog  ul li a {
+	color: #e4bb23;
+	padding: 25px 0;
+}
+
+#main.catalog  .nav-catalog  ul li a:hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+#main.catalog  .nav-catalog,
+#main.catalog #catalog-movie {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#main.catalog #catalog-movie-container {
+	padding: 20px 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#main.catalog #catalog-movie-container .card-movie {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	width: 24%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-cover {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px 8px 0px 0px;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-cover img {
+	width: 100%;
+	height: auto;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	left: 0;
+	top: 0;
+	position: absolute;
+	padding: 80px 20px;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-info .card-title {
+	font-size: 2em;
+	color: #e4bb23;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-info .card-btn-play {
+	font-size: 5em;
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-info .card-btn-play:hover {
+	color: #e4bb23
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-info .card-btn-play::before {
+	content: "\f04b";
+}
+
+#main.catalog #catalog-movie-container .card-movie:hover .card-movie-info {
+	visibility: visible;
+	opacity: 1;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-sinopse {
+	padding: 10px;
+	width: 100%;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-sinopse .card-movie-title {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-sinopse .card-movie-genre {
+	margin: 10px 0;
+	display: flex;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-sinopse .card-movie-genre a {
+	font-size: 1.2em;
+	color: #e4bb23;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-sinopse .card-movie-genre a:hover {
+	text-decoration: underline;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-footer {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	align-items: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-footer .like-movie {
+	color: #ccc;
+	cursor: pointer;
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-footer .like-movie:hover {
+	color: #e74c3c
+}
+
+#main.catalog #catalog-movie-container .card-movie .card-movie-footer .like-movie::before {
+	content: "\f004";
+}
+
+
+#footer {
+	background: #fff;
+	color: #bababa;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#footer .footer-container {
+	width: 960px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#footer .footer-container .nav-social-networks a {
+	font-size: 2.5em;
+	color: #bababa;
+	transition: all 0.2s ease-in-out;
+	margin: 0 20px;
+}
+
+#footer .footer-container .nav-social-networks a.twitter::before {
+	content: "\f099";
+}
+
+#footer .footer-container .nav-social-networks a.facebook::before {
+	content: "\f230";
+}
+
+#footer .footer-container .nav-social-networks a.instagram::before {
+	content: "\f16d";
+}
+
+#footer .footer-container .nav-social-networks a.twitter:hover {
+	color: #55acee;
+}
+
+#footer .footer-container .nav-social-networks a.facebook:hover{
+	color: #3b5998;
+}
+
+#footer .footer-container .nav-social-networks a.instagram:hover{
+	color: #e95950;
+}
+
+#footer .footer-container .nav-social-networks a.instagram {
+	margin-right: 0;
+}
